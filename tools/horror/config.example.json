@@ -1,0 +1,18 @@
+{
+ "place": "Doyers Street, New York",
+ "levels_d": [218.12,417.04,797.28,1645.41,3395.98,7012.62,14480.46,29890.18,61680.54,127299.52,262762.54,542360.18,1119400.85,2310336.13,4768479.91,9841748.17,20312942.66],
+ "target_px": [420,820],
+ "sv_image": "lv/SV0.png", "sv_crop_x": 175, "sv_crop_w": 731,
+ "night": [{"file":"in/skA.mp4","t0":0,"t1":8.05},{"file":"in/skB.mp4","t0":1.0,"t1":5.0}],
+ "voice": ["bm_george",0.92],
+ "lines": {"l1":"This is Doyers Street, in New York City.",
+           "l2":"A hundred years ago, they called it the Bloody Angle.",
+           "l3":"By day, it looks completely normal.",
+           "l4":"But someone opened Street View here at three a.m. and turned around.",
+           "l5":"Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."},
+ "captions": {"l1":[2,4,8],"l2":[4,7,10],"l3":[2,5,6],"l4":[3,6,9,12]},
+ "display": {"three":"3"},
+ "highlight": ["doyers","street","new","york","bloody","angle","normal","view","3","a.m","around"],
+ "texts": {"hook":"Never open this street<br>at <b>3 AM</b> 😨","pin":"📍 Doyers St, New York","pin_sub":"“The Bloody Angle”",
+           "chip":"STREET VIEW · 03:07 AM","end1":"Explore every street on Earth…","end2":"if you dare.","end3":"Earth Map · Live Satellite View"}
+}

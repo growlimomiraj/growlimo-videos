@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:PB;src:url(file:///usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf)}
+@font-face{font-family:PM;src:url(file:///usr/share/fonts/truetype/google-fonts/Poppins-Medium.ttf)}
+@font-face{font-family:IS;src:url(file:///usr/share/fonts/opentype/inter/Inter-SemiBold.otf)}
+@font-face{font-family:IK;src:url(file:///usr/share/fonts/opentype/inter/Inter-Black.otf)}
+html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hidden}
+/* box captions: each word on its own white tile, active keyword tile is blue */
+#cap{position:absolute;left:70px;right:70px;top:1330px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 14px;transform-origin:center top}
+#cap span{font-family:PB;font-size:66px;line-height:1;color:#0b1220;background:#fff;padding:16px 22px 12px;border-radius:16px;box-shadow:0 10px 26px rgba(0,0,0,.28)}
+#cap span.hl{background:#2563EB;color:#fff}
+/* iOS-style notification */
+.nt{position:absolute;left:50%;width:940px;margin-left:-470px;display:flex;align-items:center;gap:26px;padding:26px 30px;border-radius:44px;
+ background:rgba(246,247,250,.93);backdrop-filter:blur(20px);box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:IS;color:#111}
+.nt img{width:96px;height:96px;border-radius:24px}
+.nt .a{font-size:30px;color:#6b7280;display:flex;justify-content:space-between;width:100%}
+.nt .t{font-family:PB;font-size:40px;margin-top:2px}
+.nt .s{font-size:32px;color:#374151}
+.nt .w{flex:1}
+.nt .ok{width:58px;height:58px;border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px;font-family:PB;flex:none}
+.bad{position:absolute;left:50%;top:130px;transform:translateX(-50%);font-family:PB;font-size:44px;color:#fff;background:#ef4444;padding:16px 34px;border-radius:60px;box-shadow:0 14px 40px rgba(239,68,68,.45);white-space:nowrap}
+#end{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column}
+#end .bg{position:absolute;inset:0;background:linear-gradient(160deg,rgba(37,99,235,.92),rgba(10,22,64,.96))}
+#end .icon{position:relative;width:300px;height:300px;border-radius:70px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 4px rgba(255,255,255,.2)}
+#end .icon img{width:100%;height:100%}
+#end h1{position:relative;font-family:IK;color:#fff;font-size:96px;line-height:1.02;margin:50px 0 18px;letter-spacing:-2px;text-align:center}
+#end p{position:relative;font-family:PM;color:#cfe0ff;font-size:38px;margin:0 0 54px;text-align:center}
+.chips{position:relative;display:flex;gap:18px;margin-bottom:60px}
+.chips div{font-family:PB;font-size:32px;color:#fff;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.3);padding:12px 26px;border-radius:40px}
+.gp{position:relative;display:flex;align-items:center;gap:26px;background:#000;border:3px solid #9aa0a6;border-radius:26px;padding:22px 52px 22px 36px;color:#fff}
+.gp .t1{font-family:IS;font-size:26px;letter-spacing:2px;opacity:.9}
+.gp .t2{font-family:PB;font-size:54px;line-height:1.05}
+.bio{position:relative;margin-top:52px;font-family:PB;font-size:50px;color:#1d4ed8;background:#fff;border-radius:60px;padding:20px 56px;box-shadow:0 14px 40px rgba(0,0,0,.3)}
+</style></head><body>
+<div id="bad" class="bad" style="display:none">✕ &nbsp;No device connected</div>
+<div id="cap"></div>
+<div id="nts"></div>
+<div id="end"><div class="bg"></div>
+ <div class="icon"><img src="icon.png"></div>
+ <h1>Bluetooth<br>Auto Connect</h1>
+ <p>Your devices connect the moment you're in range</p>
+ <div class="chips"><div>🚗 Car</div><div>🎧 Earbuds</div><div>🔊 Speaker</div></div>
+ <div class="gp"><svg width="70" height="78" viewBox="0 0 70 78"><path d="M4 3 L42 39 L4 75 Q1 73 1 69 V9 Q1 5 4 3Z" fill="#00d7fe"/><path d="M4 3 L52 30 L42 39Z" fill="#00f076"/><path d="M4 75 L42 39 L52 48Z" fill="#ff3a44"/><path d="M52 30 L66 38 Q69 39 66 41 L52 48 L42 39Z" fill="#ffd400"/></svg>
+  <div><div class="t1">GET IT ON</div><div class="t2">Google Play</div></div></div>
+ <div class="bio" id="bio">🔗 Link in bio</div>
+</div>
+<script src="tl.js"></script>
+<script>
+const cap=document.getElementById('cap'), nts=document.getElementById('nts'), end=document.getElementById('end'), bad=document.getElementById('bad');
+const cl=x=>Math.min(1,Math.max(0,x)), ease=x=>1-Math.pow(1-cl(x),3);
+const back=x=>{x=cl(x);const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+window.render=function(t){
+  const c=TL.caps.find(c=>t>=c.t0&&t<c.t1);
+  if(c){ cap.innerHTML=c.words.map((w,i)=>`<span class="${c.hl.includes(i)?'hl':''}">${w}</span>`).join('');
+    [...cap.children].forEach((s,i)=>{const k=back((t-c.t0-0.04*i)/0.16); s.style.transform=`translateY(${(1-k)*28}px) scale(${0.85+0.15*k})`; s.style.opacity=cl((t-c.t0-0.04*i)/0.06);});
+  } else cap.innerHTML='';
+  if(TL.bad && t>=TL.bad[0] && t<TL.bad[1]){bad.style.display='block'; const k=back((t-TL.bad[0])/0.3); const o=1-ease((t-(TL.bad[1]-0.2))/0.2);
+    bad.style.transform=`translateX(-50%) scale(${0.6+0.4*k}) rotate(${Math.sin(t*30)*1.5*(1-cl((t-TL.bad[0])/0.6))}deg)`; bad.style.opacity=Math.min(1,k)*o;} else bad.style.display='none';
+  nts.innerHTML='';
+  TL.nts.forEach(d=>{ if(t<d.t0||t>d.t1) return;
+    const a=ease((t-d.t0)/0.38), o=1-ease((t-(d.t1-0.3))/0.3);
+    const el=document.createElement('div'); el.className='nt'; el.style.top=(d.y||150)+'px';
+    el.innerHTML=`<img src="icon.png"><div class="w"><div class="a"><span>BT AUTO CONNECT</span><span>now</span></div><div class="t">${d.title}</div><div class="s">${d.sub}</div></div><div class="ok">✓</div>`;
+    el.style.transform=`translateY(${(1-a)*-260 - (1-o)*200}px)`; el.style.opacity=Math.min(1,a*1.4)*o; nts.appendChild(el);});
+  if(t>=TL.end){ const e=t-TL.end; end.style.display='flex'; end.style.opacity=ease(e/0.3);
+    [...end.children].slice(1).forEach((k,i)=>{const a=back((e-0.07*i)/0.45); k.style.transform=`translateY(${(1-a)*60}px) scale(${0.86+0.14*a})`; k.style.opacity=cl((e-0.07*i)/0.25);});
+    const b=document.getElementById('bio'); if(e>0.9) b.style.transform=`scale(${1+0.05*Math.sin((e-0.9)*7)})`;
+    cap.innerHTML=''; nts.innerHTML=''; } else end.style.display='none';
+};
+</script></body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:IK;src:url(file:///usr/share/fonts/opentype/inter/Inter-Black.otf)}
+@font-face{font-family:IB;src:url(file:///usr/share/fonts/opentype/inter/Inter-ExtraBold.otf)}
+@font-face{font-family:IS;src:url(file:///usr/share/fonts/opentype/inter/Inter-SemiBold.otf)}
+html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hidden}
+.st{text-shadow:0 0 3px #000,0 4px 0 #000,0 -3px 0 #000,3px 0 0 #000,-3px 0 0 #000,3px 3px 0 #000,-3px 3px 0 #000,3px -3px 0 #000,-3px -3px 0 #000,0 12px 30px rgba(0,0,0,.7)}
+#hook{position:absolute;left:50px;right:50px;top:230px;text-align:center;font-family:IK;color:#fff;font-size:92px;line-height:1.05;letter-spacing:-1px;text-transform:uppercase}
+#hook b{color:#ff2a2a}
+#cap{position:absolute;left:60px;right:60px;top:1300px;text-align:center;font-family:IB;font-size:82px;line-height:1.08;color:#fff;letter-spacing:-1px}
+#cap span{display:inline-block;margin:0 10px}
+#cap .hl{color:#ff3434}
+#pin{position:absolute;width:0;height:0}
+#pin .p{position:absolute;left:-36px;top:-104px;width:72px;height:104px}
+#pin .lab{position:absolute;left:-250px;top:-250px;width:500px;text-align:center}
+#pin .lab .a{display:inline-block;white-space:nowrap;font-family:IB;font-size:44px;color:#fff;background:rgba(10,10,10,.82);border:2px solid rgba(255,255,255,.18);border-radius:18px;padding:12px 26px}
+#pin .lab .b{display:block;white-space:nowrap;margin-top:12px;font-family:IK;font-size:52px;color:#ff3434;letter-spacing:-.5px}
+#chip{position:absolute;left:44px;top:130px;font-family:IS;font-size:34px;color:#e9e9e9;background:rgba(0,0,0,.55);padding:12px 22px;border-radius:14px;letter-spacing:.5px}
+#chip i{display:inline-block;width:16px;height:16px;border-radius:50%;background:#ff2a2a;margin-right:12px;vertical-align:middle}
+#dram{position:absolute;left:44px;bottom:70px;font-family:IS;font-size:26px;color:rgba(255,255,255,.55);letter-spacing:1px;text-transform:uppercase}
+#end{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center}
+#end .icon{width:280px;height:280px;border-radius:64px;overflow:hidden;box-shadow:0 0 0 3px rgba(255,255,255,.15),0 30px 90px rgba(0,0,0,.6),0 0 120px rgba(255,40,40,.25)}
+#end .icon img{width:100%;height:100%}
+#end h1{font-family:IK;color:#fff;font-size:76px;line-height:1.05;text-align:center;margin:56px 40px 6px;letter-spacing:-1.5px}
+#end h2{font-family:IK;color:#ff2f2f;font-size:84px;margin:0 0 54px;letter-spacing:-1px}
+#end .name{font-family:IB;color:#cfd6d6;font-size:44px;margin-bottom:40px}
+.gp{display:flex;align-items:center;gap:26px;background:#000;border:3px solid #8e9499;border-radius:26px;padding:22px 52px 22px 36px;color:#fff}
+.gp .t1{font-family:IS;font-size:26px;letter-spacing:2px;opacity:.9}
+.gp .t2{font-family:IB;font-size:56px;letter-spacing:-1px;line-height:1}
+.bio{margin-top:50px;font-family:IB;font-size:52px;color:#fff;background:#d81f1f;border-radius:60px;padding:22px 58px;box-shadow:0 14px 50px rgba(216,31,31,.45)}
+</style></head><body>
+<div id="hook" class="st"></div>
+<div id="pin"><svg class="p" viewBox="0 0 72 104"><path d="M36 102C36 102 4 60 4 36a32 32 0 0 1 64 0c0 24-32 66-32 66z" fill="#e3261f" stroke="#fff" stroke-width="5"/><circle cx="36" cy="36" r="12" fill="#fff"/></svg>
+ <div class="lab"><span class="a" id="pa"></span><span class="b st" id="pb"></span></div></div>
+<div id="cap" class="st"></div>
+<div id="chip"><i></i><span id="chipt"></span></div>
+<div id="dram">Dramatization</div>
+<div id="end">
+ <div class="icon"><img src="icon.png"></div>
+ <h1 id="e1"></h1>
+ <h2 id="e2"></h2>
+ <div class="name" id="e3"></div>
+ <div class="gp"><svg width="70" height="78" viewBox="0 0 70 78"><path d="M4 3 L42 39 L4 75 Q1 73 1 69 V9 Q1 5 4 3Z" fill="#00d7fe"/><path d="M4 3 L52 30 L42 39Z" fill="#00f076"/><path d="M4 75 L42 39 L52 48Z" fill="#ff3a44"/><path d="M52 30 L66 38 Q69 39 66 41 L52 48 L42 39Z" fill="#ffd400"/></svg>
+  <div><div class="t1">GET IT ON</div><div class="t2">Google Play</div></div></div>
+ <div class="bio" id="bio">🔗 Link in bio</div>
+</div>
+<script src="tl.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+$('hook').innerHTML=TL.T.hook; $('pa').textContent=TL.T.pin; $('pb').textContent=TL.T.pin_sub; $('chipt').textContent=TL.T.chip; $('e1').textContent=TL.T.end1; $('e2').textContent=TL.T.end2; $('e3').textContent=TL.T.end3; const cl=x=>Math.min(1,Math.max(0,x)); const ease=x=>1-Math.pow(1-cl(x),3);
+const back=x=>{x=cl(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+window.render=function(t){
+  // hook
+  const h=$('hook'); if(t>=TL.hook[0]&&t<TL.hook[1]){h.style.display='block'; const k=back((t-TL.hook[0])/0.35); h.style.transform=`scale(${0.8+0.2*k})`; h.style.opacity=Math.min(1,k)*(1-ease((t-(TL.hook[1]-0.3))/0.3));} else h.style.display='none';
+  // pin
+  const pn=$('pin'); if(t>=TL.pinT[0]&&t<TL.pinT[1]){ const f=Math.min(TL.pin.length-1,Math.round(t*30)); const [x,y]=TL.pin[f]; pn.style.display='block'; pn.style.left=x+'px'; pn.style.top=y+'px';
+     const d=back((t-TL.pinT[0])/0.45); pn.querySelector('.p').style.transform=`translateY(${(1-d)*-160}px)`; pn.style.opacity=Math.min(1,(t-TL.pinT[0])/0.15)*(1-ease((t-(TL.pinT[1]-0.25))/0.25));
+     const lb=pn.querySelector('.lab'); const a=back((t-TL.pinT[0]-0.35)/0.4); lb.style.opacity=cl((t-TL.pinT[0]-0.35)/0.2); lb.style.transform=`scale(${0.7+0.3*a})`;
+     pn.querySelector('.b').style.opacity=cl((t-TL.pinSubT)/0.25); } else pn.style.display='none';
+  // captions (hidden while pin label shows its own text? keep both; caption lower)
+  const c=TL.caps.find(c=>t>=c.t0&&t<c.t1); const cp=$('cap');
+  if(c && t<TL.scare){ cp.innerHTML=c.words.map((w,i)=>`<span class="${c.hl.includes(i)?'hl':''}">${w}</span>`).join(''); const k=back((t-c.t0)/0.12); cp.style.transform=`scale(${0.85+0.15*k})`; cp.style.opacity=cl((t-c.t0)/0.05);} else cp.innerHTML='';
+  // night chip + dramatization
+  const nt=t>=TL.night[0]&&t<TL.night[1]&&t<TL.scare; $('chip').style.display=nt?'block':'none'; $('dram').style.display=(t>=TL.night[0]&&t<TL.night[1])?'block':'none';
+  if(nt){ $('chip').querySelector('i').style.opacity=(Math.floor(t*2)%2)?1:0.25; }
+  // end
+  const e=$('end'); if(t>=TL.end){ const k=t-TL.end; e.style.display='flex';
+    [...e.children].forEach((el,i)=>{const a=back((k-0.12*i)/0.5); el.style.opacity=cl((k-0.12*i)/0.3); el.style.transform=`translateY(${(1-a)*50}px) scale(${0.88+0.12*a})`;});
+    if(k>1.2) $('bio').style.transform=`scale(${1+0.05*Math.sin((k-1.2)*6)})`; } else e.style.display='none';
+};
+</script></body></html>
