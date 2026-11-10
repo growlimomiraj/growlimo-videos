@@ -31,7 +31,7 @@ fm[:,:fe]*=ramp; fm[:,-fe:]*=ramp[::-1]; fm[:fe,:]*=ramp[:,None]; fm[-fe:,:]*=ra
 def render(C,P):
     out=np.zeros((H,W,3),np.float32)
     # base: coarsest level that covers screen fully
-    order=[i for i in range(N) if k[i]/P>=0.22]
+    order=[i for i in range(N) if k[i]/P>=0.45]
     base=None
     for i in range(N):
         if k[i]/P>=1.0: base=i; break
@@ -47,7 +47,7 @@ def render(C,P):
         else:
             a=cv2.warpAffine(fm,M,(W,H),flags=cv2.INTER_LINEAR)
             # fade in finer level as it grows (avoid popping tiny patch)
-            g=np.clip((sc-0.22)/0.25,0,1)
+            g=np.clip((sc-0.45)/0.35,0,1)
             a=(a*g)[...,None]; out=out*(1-a)+img*a
     return out
 FPS=30
@@ -63,7 +63,7 @@ def ease(x): return x*x*(3-2*x)
 frames=[]
 # phase A: zoom from globe to L0 (6.0s), log-scale with smootherstep
 TA=6.0; nA=int(TA*FPS)
-P0,P1=1.25,k[0]*1.0
+P0,P1=1.0,k[0]*1.0
 for f in range(nA):
     x=f/(nA-1); e=x*x*x*(x*(6*x-15)+10)
     lp=np.log(P0)+(np.log(P1)-np.log(P0))*e

@@ -51,6 +51,13 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 3. Comment the Play Store link from the page's own account in the built-in browser. Switch profiles with More > Switch profiles. In the comment box, type then press Return, reload, and confirm the comment is there. Pinning is mobile-only, so remind the owner.
 4. Append the slug to `used_places.txt` or `bt_scenarios_used.txt`, commit and push.
 
+## Gotchas learned (2026-11-11 run)
+- Browser-pane downloads land in Downloads as `<guid>.tmp` files (not the real filename). List the folder, pick the newest `.tmp` by mtime/size, and stage it. Do one download at a time so you know which is which. Don't `navigate` the Earth tab right after `exportMosaic` — the download can be lost; stage it first.
+- After re-injecting `earth_capture.js` on a static view, nothing redraws: hover the mouse over the canvas once before `snap`, otherwise you get a blank frame. In Street View, hover near the bottom (cropped area) so the cursor ring isn't in the shot.
+- Stop the zoom stack at the first level ≥ ~1.8e7 m; an extra level (~3.7e7) aligns badly and leaves a dark rectangle over the globe. `zoom.py` now starts at P0=1.0 and fades levels in from 45% coverage.
+- Flow flagged "mannequin figures" as sexual content (refunded). Use "a tall dark shadowy silhouette" instead.
+- Extend length slider: press Right one key per action (a `repeat` count overshoots). Check `input[type=range]` value = 8.
+
 ## Rules
 - Never post a video that failed QC. Post nothing rather than something broken, and report why.
 - No real people's names or likenesses in the Flow prompts. No gore. Keep the horror to the level of Halloween props and shadowy figures.
