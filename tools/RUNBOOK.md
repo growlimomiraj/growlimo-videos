@@ -58,6 +58,14 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Flow flagged "mannequin figures" as sexual content (refunded). Use "a tall dark shadowy silhouette" instead.
 - Extend length slider: press Right one key per action (a `repeat` count overshoots). Check `input[type=range]` value = 8.
 
+## Gotchas learned (2026-11-12 run)
+- Word timings: Hugging Face / OpenAI model hosts are blocked, so faster-whisper can't download. `pip install pocketsphinx --break-system-packages` works offline (bundled model): `Decoder(samprate=16000)`, then `seg()` gives `word, start_frame/100, end_frame/100`. Good enough for caption timing.
+- UGC render: copy `bluetooth_icon.png` to `icon.png` in the work dir, or the notification and end-card icons render blank.
+- Single-pass loudnorm landed at -15.2 LUFS on the UGC mix; use two-pass (`print_format=json`, then `measured_*` + `linear=true`) to hit ~-14.
+- Before generating night scenes, check Downloads/Flow for unused clips of the same place (the 11-11 run left two Winchester clips; reused them, 0 credits).
+- Earth zoom stack: 10 ticks gave only ~1.65× per level near the ground; 13 ticks (10+3) gives ~2.17×. Batch at most 3 levels per browser_batch (50 s limit).
+- Browser-pane screenshots lag one action behind on Earth/Flow; take a second screenshot or read state with JS before clicking.
+
 ## Rules
 - Never post a video that failed QC. Post nothing rather than something broken, and report why.
 - No real people's names or likenesses in the Flow prompts. No gore. Keep the horror to the level of Halloween props and shadowy figures.
