@@ -71,3 +71,12 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - No real people's names or likenesses in the Flow prompts. No gore. Keep the horror to the level of Halloween props and shadowy figures.
 - Do not sign in to anything or enter passwords. If Flow, Instagram or Google Earth shows a sign-in page, stop and report.
 - If the PC or the browser can't be reached, report that and end.
+
+## Gotchas learned (2026-11-13 run)
+- Earth: you can skip search and go straight to a top-down view with `navigate https://earth.google.com/web/@<lat>,<lon>,<alt>a,220d,35y,0h,0t,0r` (wait ~15 s, hover once). Any `navigate` reloads the page, so re-inject `earth_capture.js` after it. A Street View pano can't be opened by URL (it drops back to space); use pegman + click a blue line, then `left_click_drag` to turn/tilt.
+- 13 ticks per level from 220 m gave 16 levels (L15 ≈ 1.98e7) with match scores ≥0.82 except L0 (0.38, still fine). 2 levels per browser_batch fits the 50 s limit; 3 can time out (the snap still lands, check `SHOTS`).
+- Downloads: Flow clips and blob JPEGs first land as `<guid>.tmp`, later renamed (`<Title>…_<8hex>.mp4`, `<name>.jpg`). Staging the `.tmp` works; match by size.
+- Flow pane size can change mid-run (800×600 → 480×360); prefer `find` refs or take a fresh screenshot before coordinate clicks. Extend popup covers the prompt box: press Escape after setting the slider, then type.
+- Reference still for the CTA: the scene thumbnails are `<img>` 720×1280 frames that `fetch()` fine from the Flow page — `REFB = await (await fetch(img.src)).blob()`, then the `HTMLInputElement.prototype.click` hook. Restore the original `click` afterwards.
+- BT tonight used 4 gens (hook 8 s, extend 8 s, B-roll 8 s, one CTA clip with both the app line and "free on Google Play / link in bio") = 96 credits; make.py adapted to 3 sources (a, b, c). pocketsphinx `Segment` uses `start_frame`/`end_frame`.
+- The extend line got cut off at 16.0 s ("Every single…"); keep extend lines short (≤ 6 s of speech).

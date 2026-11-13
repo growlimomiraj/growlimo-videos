@@ -1,3 +1,4 @@
 car-stereo (man in car, Nov 10)
 gym-earbuds (woman at gym, Nov 11)
 kitchen-speaker (man cooking, home speaker, Nov 12)
+home-office-headphones (woman at home desk, headphones before a video call, Nov 13)
