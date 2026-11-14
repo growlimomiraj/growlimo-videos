@@ -80,3 +80,11 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Reference still for the CTA: the scene thumbnails are `<img>` 720×1280 frames that `fetch()` fine from the Flow page — `REFB = await (await fetch(img.src)).blob()`, then the `HTMLInputElement.prototype.click` hook. Restore the original `click` afterwards.
 - BT tonight used 4 gens (hook 8 s, extend 8 s, B-roll 8 s, one CTA clip with both the app line and "free on Google Play / link in bio") = 96 credits; make.py adapted to 3 sources (a, b, c). pocketsphinx `Segment` uses `start_frame`/`end_frame`.
 - The extend line got cut off at 16.0 s ("Every single…"); keep extend lines short (≤ 6 s of speech).
+
+## Gotchas learned (2026-11-14 run)
+- Some places have NO Street View coverage on the property (Waverly Hills: private land, blue lines only on distant side streets). Fallback that worked: a tilted 3D Earth view of the facade as the "daytime" shot — `navigate @<lat>,<lon>,200a,300d,35y,0h,72t,0r` (camera south of a south-facing facade), wait ~30 s for tiles, re-inject `earth_capture.js`, snap `SV0` and set `sv_crop_x: 0, sv_crop_w: 1080` (full frame; the canvas has no UI to crop).
+- Zoom stack from 450 m start (13 ticks/level) reached 2.47e7 at L14 — globe looked clean, match scores 0.75–0.92.
+- Flow downloads: right-click a tile → Download → use `find "Original size"` and click that ref (submenu position varies). A download from the scene editor's top download button silently failed once; re-download from the grid tile (the stacked/extended tile gives the 16 s file, ~6.6 MB).
+- "Add to prompt" on a video tile attaches the *video* (switches to 15 s video-to-video) — remove it. For the CTA reference still, open the scene editor and `fetch()` the first 720×1280 timeline `<img>` (y≈507), then use the `HTMLInputElement.prototype.click` hook + Upload media. Grid `<video>` previews are tainted / fetch-blocked.
+- The Ingredients CTA clip came back with **burned-in subtitles** at ~74–80 % height despite "no subtitles". Fixed in make.py with zoom 1.38 and a top-anchored crop (`TOP={'c'}`). Check every Flow clip for burned text.
+- Extend 8 s = 24 credits (4 s = 12). Credits used tonight: 48 (Earth ×2) + 24 hook + 24 B-roll + 24 extend + 24 CTA = 144.
