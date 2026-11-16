@@ -88,3 +88,12 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - "Add to prompt" on a video tile attaches the *video* (switches to 15 s video-to-video) — remove it. For the CTA reference still, open the scene editor and `fetch()` the first 720×1280 timeline `<img>` (y≈507), then use the `HTMLInputElement.prototype.click` hook + Upload media. Grid `<video>` previews are tainted / fetch-blocked.
 - The Ingredients CTA clip came back with **burned-in subtitles** at ~74–80 % height despite "no subtitles". Fixed in make.py with zoom 1.38 and a top-anchored crop (`TOP={'c'}`). Check every Flow clip for burned text.
 - Extend 8 s = 24 credits (4 s = 12). Credits used tonight: 48 (Earth ×2) + 24 hook + 24 B-roll + 24 extend + 24 CTA = 144.
+
+## Gotchas learned (2026-11-16 run)
+- Earth search box: the first click only opens the dropdown; type after it is focused. Pick the place result, read its lat/lon from the URL, then `navigate @lat,lon,40a,450d,35y,0h,0t,0r`. Clean basemap is under View > Basemap settings > Clean.
+- 450 m start, 13 ticks/level → 15 levels (L14 ≈ 2.2e7), match scores 0.86–0.97 (L0 0.68). 2 levels per browser_batch fits.
+- Street View drags: a 600 px drag turns ~27°. In a batch, a drag that changes the URL aborts the batch ("Page navigated during drag"), so drag one call at a time. A drag can also hop to the next pano; check the view before snapping.
+- Lizzie Borden House: "an axe leaning by the door" was swapped for "a rocking chair moving on its own" to stay clear of violence filters; the silhouette-in-window still read well.
+- Scene-editor timeline `<img>`s were only 54×96 data URIs this time. The 720×1280 still at the top scene strip (first `img` with naturalWidth 720 and y<60) was the current scene's first frame and worked as the CTA reference.
+- BT used 3 gens (hook 8 s + extend 8 s + CTA 8 s = 72). No B-roll: the extend clip's dead air (she looks at her phone, ~8.3–11 s) served as the B-roll under "Then I found this app 👇". Final cut ≈21 s. Local make.py: SEG a/a/a/c/c with B-roll at index 1 (music gain + whoosh indices moved to starts[1]).
+- Caption chunker splits "that | connects them" (18 chars > 17); add a PAIR ('that','connects') so the last-word merge keeps it as one tile.
