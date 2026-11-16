@@ -97,3 +97,11 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Scene-editor timeline `<img>`s were only 54×96 data URIs this time. The 720×1280 still at the top scene strip (first `img` with naturalWidth 720 and y<60) was the current scene's first frame and worked as the CTA reference.
 - BT used 3 gens (hook 8 s + extend 8 s + CTA 8 s = 72). No B-roll: the extend clip's dead air (she looks at her phone, ~8.3–11 s) served as the B-roll under "Then I found this app 👇". Final cut ≈21 s. Local make.py: SEG a/a/a/c/c with B-roll at index 1 (music gain + whoosh indices moved to starts[1]).
 - Caption chunker splits "that | connects them" (18 chars > 17); add a PAIR ('that','connects') so the last-word merge keeps it as one tile.
+
+## Gotchas learned (2026-11-17 run)
+- Credits were 112 (< 130) → Earth Map only, night ×1 (24). One clip is enough: reuse the reveal as the second night piece (`skA` 0–8 s, then `skA` 2.8–4.6 s ending on the window) so the scare lands on the silhouette.
+- Hilltop places: a URL `a` below the real ground makes Earth clamp to `10d`. Use the ground altitude Earth reports (Bran: `1190a` worked for the start view). After the first scroll the reference altitude snaps to the real ground (~782 m), so L0's `450d` is really ~858 m above that ground — put the corrected value in `levels_d[0]` (match score then 0.69).
+- 13 ticks/level from that start reached 2.0e7 at L13 (14 levels), scores 0.69–0.96.
+- Street View: the blue dots around attractions are user photo spheres. The courtyard sphere at Bran had unblurred tourists — skip those. A park sphere below the castle (no people) worked: drag down to tilt up (tilt ~113), `sv_crop_x: 0, sv_crop_w: 1080` (no arrows to crop).
+- The Earth tab's pane frame changed mid-run (800×1422 → 514×914); take a fresh full screenshot before coordinate clicks.
+- Instagram web: the first `type` after clicking the comment ref can miss (page scrolls). Click the box by coordinate, confirm `document.activeElement` is the TEXTAREA, then type + Return.
