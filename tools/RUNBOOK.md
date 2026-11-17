@@ -105,3 +105,11 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Street View: the blue dots around attractions are user photo spheres. The courtyard sphere at Bran had unblurred tourists — skip those. A park sphere below the castle (no people) worked: drag down to tilt up (tilt ~113), `sv_crop_x: 0, sv_crop_w: 1080` (no arrows to crop).
 - The Earth tab's pane frame changed mid-run (800×1422 → 514×914); take a fresh full screenshot before coordinate clicks.
 - Instagram web: the first `type` after clicking the comment ref can miss (page scrolls). Click the box by coordinate, confirm `document.activeElement` is the TEXTAREA, then type + Return.
+
+## Gotchas learned (2026-11-18 run)
+- Credits were 110 (< 130) → Earth Map only, night ×1 (24); 86 left after. Bluetooth skipped again (2nd night running) — credits reset 4 Dec.
+- Islands: start the zoom stack at `1500d` (whole island in frame, `navigate @lat,lon,10a,1500d,35y,0h,0t,0r`, ~30 s for tiles). 13 ticks/level → 13 levels to 1.6e7, then one 7-tick level to 2.45e7 (globe in space). Match scores 0.91–0.99. Mosaic is only ~5 MB (ocean compresses); that's fine.
+- Ocean near coasts renders as dark "halos" (real imagery) vs flat lighter blue (generic ocean); it shows as faint soft edges for <1 s mid-zoom. Acceptable.
+- Hashima Street View: pegman at 900d shows Google trek lines inside the island; clicking a west-side lane opened a June-2013 sphere (no people) with a staircase in a ruined block. `sv_crop_x 175 / w 731` clears the arrows. A Google Earth survey popup appeared on entering SV — close it with the X.
+- Prompt "a tall dark shadowy silhouette standing motionless in a dark doorway" gave a clean reveal at 4.4–6.0 s; night = skA 0–8.05 + skA 4.0–5.8.
+- Used l3 "By day, it's just an empty ruin." (the stock "completely normal" line doesn't fit a ruin) and l2 without a year ("Then one day, everyone left.") because digits break the Kokoro word-timing split; the year went in `pin_sub`.
