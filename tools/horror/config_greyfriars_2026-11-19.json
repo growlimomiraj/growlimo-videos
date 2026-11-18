@@ -1,0 +1,18 @@
+{
+ "place": "Greyfriars Kirkyard, Edinburgh",
+ "levels_d": [437.4,948.61,2057.40,4462.71,9680.22,20999.49,45541.83,98776.57,214219.18,464735.78,1007902.30,2185944.68,4740905.34,10284078.24,22304519.73],
+ "target_px": [556,780],
+ "sv_image": "lv/SV0.png", "sv_crop_x": 175, "sv_crop_w": 731,
+ "night": [{"file":"in/skA.mp4","t0":0,"t1":8.0},{"file":"in/skA.mp4","t0":2.2,"t1":4.2}],
+ "voice": ["bm_george",0.92],
+ "lines": {"l1":"This is Greyfriars Kirkyard, in Edinburgh.",
+           "l2":"Locals say the Mackenzie Poltergeist still lives here.",
+           "l3":"By day, it's just a quiet old graveyard.",
+           "l4":"But someone opened Street View here at three a.m. and turned around.",
+           "l5":"Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."},
+ "captions": {"l1":[2,4,6],"l2":[2,5,8],"l3":[2,5,8],"l4":[3,6,9,12]},
+ "display": {"three":"3"},
+ "highlight": ["greyfriars","kirkyard","edinburgh","mackenzie","poltergeist","graveyard","view","3","a.m","around"],
+ "texts": {"hook":"Never open this street<br>at <b>3 AM</b> 😨","pin":"📍 Greyfriars Kirkyard, Edinburgh","pin_sub":"“The Mackenzie Poltergeist”",
+           "chip":"STREET VIEW · 03:07 AM","end1":"Explore every street on Earth…","end2":"if you dare.","end3":"Earth Map · Live Satellite View"}
+}

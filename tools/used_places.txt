@@ -6,3 +6,4 @@ waverly-hills
 lizzie-borden
 bran-castle
 hashima
+greyfriars
