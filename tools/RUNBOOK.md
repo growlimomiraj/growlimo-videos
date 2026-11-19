@@ -126,3 +126,12 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - The basemap reverted to labels after the pegman/SV session, but the zoom stack (captured right after setting Clean and one navigate) stayed clean. Check L0 for labels before scrolling.
 - Night: "a tall dark hooded silhouette standing motionless far away between the graves" gave a figure in view 0.5–5.5 s; night = skA 0–8.0 + skA 2.2–4.2 (the figure is centred at ~4.0 s, so the scare lands on it). Config saved as `tools/horror/config_greyfriars_2026-11-19.json`.
 - Instagram was on @bluetooth_auticonnect; switched with ☰ More (left, ~(28,515)) → Switch profiles → earthmaplivesatellite.
+
+## Gotchas learned (2026-11-20 run)
+- Credits were 64 again at the start (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- Browser downloads (Flow mp4 and named blob JPEGs) all stayed as `<guid>.tmp` this time, never renamed. Listing Downloads is ~25k tokens per call, so do every download first and list once; match the `.tmp` by the byte size `exportMosaic`/`preview` return.
+- Earth screenshots: grey unless you `tabs_select` the tab right before; the first screenshot after an action is often grey, the second one is real.
+- Catacombs start `navigate @48.83388,2.33237,62a,450d,35y,0h,0t,0r` → Earth reported `551a,10d` (camera ~541 m, ground ~75 m); used `levels_d[0]=480` (score 0.75). 13 ticks/level → 15 levels to 2.48e7, scores 0.67–0.90. Clean basemap was already set.
+- Pegman: the first click on the Street View hint's X toggled pegman mode off; click pegman again, wait 8 s, click the line. SV at 11 Place Denfert-Rochereau (Oct 2025) faced roadworks; four 600 px left drags (heading ~110°) faced the Denfert RER station with no clear people.
+- Night prompt with "tunnel entrance lined with ancient stacked skulls like a museum ossuary … a tall dark shadowy silhouette standing motionless deep in the tunnel" passed the filter; figure visible 2.5–5.5 s. night = skA 0–8.04 + skA 3.0–5.0. Config saved as `tools/horror/config_catacombs-paris_2026-11-20.json`. Final 31.1 s, -14.3 LUFS, 45.6 MB.
+- Instagram was already on @earthmaplivesatellite (nav "Profile" image alt shows the active account).
