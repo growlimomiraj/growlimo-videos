@@ -1,0 +1,18 @@
+{
+ "place": "Bhangarh Fort, India",
+ "levels_d": [724.35,1571.13,3409.09,7394.97,16037.05,34778.99,75407.32,163484.17,354502.18,768917.26,1668848.39,3618569.37,7846990.38,17022104.88,25868867.29],
+ "target_px": [565,950],
+ "sv_image": "lv/SV0.png", "sv_crop_x": 0, "sv_crop_w": 1080,
+ "night": [{"file":"in/skA.mp4","t0":0,"t1":8.04},{"file":"in/skA.mp4","t0":3.6,"t1":5.4}],
+ "voice": ["bm_george",0.92],
+ "lines": {"l1":"This is Bhangarh Fort, in India.",
+           "l2":"Visitors are not allowed inside after sunset.",
+           "l3":"By day, it's just an empty ruin.",
+           "l4":"But someone opened Street View here at three a.m. and turned around.",
+           "l5":"Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."},
+ "captions": {"l1":[2,4,6],"l2":[2,4,7],"l3":[2,4,7],"l4":[3,6,9,12]},
+ "display": {"three":"3"},
+ "highlight": ["bhangarh","fort","india","not","allowed","sunset","ruin","view","3","a.m","around"],
+ "texts": {"hook":"Never open this street<br>at <b>3 AM</b> 😨","pin":"📍 Bhangarh Fort, India","pin_sub":"“Closed after sunset”",
+           "chip":"STREET VIEW · 03:07 AM","end1":"Explore every street on Earth…","end2":"if you dare.","end3":"Earth Map · Live Satellite View"}
+}
