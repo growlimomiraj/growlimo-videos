@@ -8,3 +8,4 @@ bran-castle
 hashima
 greyfriars
 catacombs-paris
+bhangarh

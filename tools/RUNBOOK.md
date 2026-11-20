@@ -135,3 +135,12 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Pegman: the first click on the Street View hint's X toggled pegman mode off; click pegman again, wait 8 s, click the line. SV at 11 Place Denfert-Rochereau (Oct 2025) faced roadworks; four 600 px left drags (heading ~110°) faced the Denfert RER station with no clear people.
 - Night prompt with "tunnel entrance lined with ancient stacked skulls like a museum ossuary … a tall dark shadowy silhouette standing motionless deep in the tunnel" passed the filter; figure visible 2.5–5.5 s. night = skA 0–8.04 + skA 3.0–5.0. Config saved as `tools/horror/config_catacombs-paris_2026-11-20.json`. Final 31.1 s, -14.3 LUFS, 45.6 MB.
 - Instagram was already on @earthmaplivesatellite (nav "Profile" image alt shows the active account).
+
+## Gotchas learned (2026-11-21 run)
+- Credits were 64 again (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- Earth search results live in shadow DOM (find/get_page_text see nothing) — skip search and `navigate @lat,lon,...` directly. Bhangarh palace: `@27.0964,76.2859,350a,800d` (ground ≈ 426 m, so L0 real distance = 1150−426 ≈ 724 m; `levels_d[0]=724.35`). 13 ticks/level → L13 = 1.70e7, then one 7-tick level → L14 = 2.59e7. Scores 0.79–0.98.
+- Grey screenshots: a reliable preview without Downloads is `peekbig()` — draw `_ocv` to a 360-px canvas, return its dataURL padded to ~110k chars in a standalone `javascript_tool` call (no screenshot in the same batch). The oversize result is saved to a tool-results .txt file instead of entering context; decode the base64 locally and Read it. (A batch that also contains a screenshot gets truncated inline instead — expensive.) Screenshots of the Earth UI did work right after opening the View menu.
+- Clean basemap: View menu (~(130,11) in the 800×1422 frame) → Basemap settings → Clean radio (~(212,558)) → X.
+- No official Street View at Bhangarh; the blue dots are photo spheres. Clicking one inside the palace (~(396,596) at 900d) opened a sphere looking north over ruined walls and hills, no people. `sv_crop_x 0 / w 1080`.
+- Night prompt with "a tall dark shadowy silhouette standing motionless in a dark stone archway" gave two hooded figures in archways 4.2–5.4 s. The scare covers the last 0.95 s of the second piece, so end the piece ~0.4 s after the figure is fully in view: night = skA 0–8.04 + skA 3.6–5.4. Final 30.9 s, -14.3 LUFS, 43.4 MB.
+- Instagram web was already on @earthmaplivesatellite.
