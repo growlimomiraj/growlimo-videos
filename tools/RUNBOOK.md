@@ -144,3 +144,12 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - No official Street View at Bhangarh; the blue dots are photo spheres. Clicking one inside the palace (~(396,596) at 900d) opened a sphere looking north over ruined walls and hills, no people. `sv_crop_x 0 / w 1080`.
 - Night prompt with "a tall dark shadowy silhouette standing motionless in a dark stone archway" gave two hooded figures in archways 4.2–5.4 s. The scare covers the last 0.95 s of the second piece, so end the piece ~0.4 s after the figure is fully in view: night = skA 0–8.04 + skA 3.6–5.4. Final 30.9 s, -14.3 LUFS, 43.4 MB.
 - Instagram web was already on @earthmaplivesatellite.
+
+## Gotchas learned (2026-11-22 run)
+- Credits were 64 again (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- Centralia: `navigate @40.8043,-76.3404,450a,450d,35y,0h,0t,0r` (ground ≈ 446 m, so `levels_d[0]=454`). 13 ticks/level → L14 = 2.31e7, scores 0.83–0.96. Clean basemap was already set. Pin on the Locust Ave / Park St crossing (`target_px [290,990]`).
+- Street View without the pegman: View menu (~(130,11)) → **Show Street View** (~(180,120)) draws the blue lines; preview them with `peekbig`, then click a line. Locust Ave pano faces north up the empty road; the canvas-drawn "Locust Ave" label sits at y ≈ 1230+ in the 1080×1920 frame, so `sv_crop_x 215 / w 650` (crop height 1155) clears it.
+- l2 avoids digits ("for over sixty years"); the year went in `pin_sub`. l3 "By day, it's just an empty ghost town."
+- Night prompt with "a tall dark shadowy silhouette standing motionless far down the road in the smoke" gave the figure 6.0–8.0 s (fully in view ~6.4); night = skA 0–8.04 + skA 5.0–6.9. Final 31.0 s, -14.2 LUFS, 43.6 MB. Config saved as `tools/horror/config_centralia_2026-11-22.json`.
+- Flow credit balance: click the `PRO` chip (top right) and read "NN Google Flow credits" from the panel text.
+- Instagram /reel/ links redirect to the /reels/ feed; the comment icon opens a small panel with "Add a comment…" (a contenteditable DIV, not a TEXTAREA). Verify on /p/<shortcode>/ after posting.

@@ -9,3 +9,4 @@ hashima
 greyfriars
 catacombs-paris
 bhangarh
+centralia
