@@ -1,0 +1,18 @@
+{
+ "place": "Centralia, Pennsylvania",
+ "levels_d": [454.0,984.51,2135.55,4631.25,10042.98,21778.15,47237.42,102454.77,222155.97,481910.41,1045362.97,2266822.84,4917185.27,10663472.19,23132248.98],
+ "target_px": [290,990],
+ "sv_image": "lv/SV0.png", "sv_crop_x": 215, "sv_crop_w": 650,
+ "night": [{"file":"in/skA.mp4","t0":0,"t1":8.04},{"file":"in/skA.mp4","t0":5.0,"t1":6.9}],
+ "voice": ["bm_george",0.92],
+ "lines": {"l1":"This is Centralia, in Pennsylvania.",
+           "l2":"A fire has burned under this town for over sixty years.",
+           "l3":"By day, it's just an empty ghost town.",
+           "l4":"But someone opened Street View here at three a.m. and turned around.",
+           "l5":"Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."},
+ "captions": {"l1":[2,3,5],"l2":[2,4,7,9,11],"l3":[2,4,6,8],"l4":[3,6,9,12]},
+ "display": {"three":"3"},
+ "highlight": ["centralia","pennsylvania","fire","burned","sixty","years","ghost","town","view","3","a.m","around"],
+ "texts": {"hook":"Never open this street<br>at <b>3 AM</b> 😨","pin":"📍 Centralia, Pennsylvania","pin_sub":"“Burning since 1962”",
+           "chip":"STREET VIEW · 03:07 AM","end1":"Explore every street on Earth…","end2":"if you dare.","end3":"Earth Map · Live Satellite View"}
+}
