@@ -1,0 +1,99 @@
+{
+ "place": "Salem, Massachusetts",
+ "levels_d": [
+  450.0,
+  976.8,
+  2118.36,
+  4594.21,
+  9961.29,
+  21603.84,
+  46858.9,
+  101634.92,
+  220404.41,
+  478089.26,
+  1036983.4,
+  2248997.95,
+  4877913.52,
+  10579641.15,
+  22945414.5
+ ],
+ "target_px": [
+  540,
+  960
+ ],
+ "sv_image": "lv/SV0.png",
+ "sv_crop_x": 165,
+ "sv_crop_w": 740,
+ "night": [
+  {
+   "file": "in/skA.mp4",
+   "t0": 0,
+   "t1": 8.04
+  },
+  {
+   "file": "in/skA.mp4",
+   "t0": 3.0,
+   "t1": 4.9
+  }
+ ],
+ "voice": [
+  "bm_george",
+  0.92
+ ],
+ "lines": {
+  "l1": "This is Salem, in Massachusetts.",
+  "l2": "Centuries ago, nineteen people were executed here for witchcraft.",
+  "l3": "By day, it looks completely normal.",
+  "l4": "But someone opened Street View here at three a.m. and turned around.",
+  "l5": "Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."
+ },
+ "captions": {
+  "l1": [
+   2,
+   3,
+   5
+  ],
+  "l2": [
+   2,
+   4,
+   6,
+   9
+  ],
+  "l3": [
+   2,
+   4,
+   6
+  ],
+  "l4": [
+   3,
+   6,
+   9,
+   12
+  ]
+ },
+ "display": {
+  "three": "3"
+ },
+ "highlight": [
+  "salem",
+  "massachusetts",
+  "nineteen",
+  "executed",
+  "witchcraft",
+  "normal",
+  "view",
+  "3",
+  "a.m",
+  "around",
+  "centuries"
+ ],
+ "texts": {
+  "hook": "Never open this street<br>at <b>3 AM</b> 😨",
+  "pin": "📍 Salem, Massachusetts",
+  "pin_sub": "“Witch trials, 1692”",
+  "chip": "STREET VIEW · 03:07 AM",
+  "end1": "Explore every street on Earth…",
+  "end2": "if you dare.",
+  "end3": "Earth Map · Live Satellite View"
+ }
+}
