@@ -10,3 +10,4 @@ greyfriars
 catacombs-paris
 bhangarh
 centralia
+salem

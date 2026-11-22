@@ -153,3 +153,12 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Night prompt with "a tall dark shadowy silhouette standing motionless far down the road in the smoke" gave the figure 6.0–8.0 s (fully in view ~6.4); night = skA 0–8.04 + skA 5.0–6.9. Final 31.0 s, -14.2 LUFS, 43.6 MB. Config saved as `tools/horror/config_centralia_2026-11-22.json`.
 - Flow credit balance: click the `PRO` chip (top right) and read "NN Google Flow credits" from the panel text.
 - Instagram /reel/ links redirect to the /reels/ feed; the comment icon opens a small panel with "Add a comment…" (a contenteditable DIV, not a TEXTAREA). Verify on /p/<shortcode>/ after posting.
+
+## Gotchas learned (2026-11-23 run)
+- Credits were 64 again (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- Fast way to get a place's lat/lon without the shadow-DOM search box: `preview_start https://earth.google.com/web/search/<query>` (e.g. `Proctor's+Ledge+Memorial,+Salem,+MA`), wait ~20 s, read `location.href` → `@42.5176374,-70.9090035,4.8a,...`. Then `navigate @lat,lon,5a,450d,35y,0h,0t,0r`. Ground ≈ 5 m, so `levels_d[0]=450`. 13 ticks/level → L14 = 2.29e7 (15 levels). Clean basemap was already set.
+- The flow-tile download came through as a `.tmp` (4.5 MB) next to the mosaic `.tmp` (11.4 MB); the SV JPEG stayed a `.tmp` too (not renamed after 12 s), so a second Downloads listing was needed.
+- Street View: View menu → Show Street View drew the line on Pope St; a click opened "8 Pope St" (Jul 2025) facing north up an ordinary street (parked cars, plates blurred). Turning left faced a private house close-up with its number — avoided. `sv_crop_x 165 / w 740` clears the canvas "Pope St" label and arrows.
+- `display: {"three":"3"}` also rewrites "three hundred" → "3 hundred"; avoid "three" anywhere except "three a.m." (used "Centuries ago, …" for l2, year in `pin_sub`).
+- Night prompt with "a circle of small candles burning on the grass, crows on a wooden fence, and a tall dark shadowy silhouette standing motionless under the bare trees" passed; figure in view 3.0–5.5 s. night = skA 0–8.04 + skA 3.0–4.9. Final 31.0 s, -14.3 LUFS, 44.3 MB. Config saved as `tools/horror/config_salem_2026-11-23.json`.
+- Instagram web was already on @earthmaplivesatellite; the /p/ page comment box was a TEXTAREA this time.
