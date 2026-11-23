@@ -162,3 +162,13 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - `display: {"three":"3"}` also rewrites "three hundred" → "3 hundred"; avoid "three" anywhere except "three a.m." (used "Centuries ago, …" for l2, year in `pin_sub`).
 - Night prompt with "a circle of small candles burning on the grass, crows on a wooden fence, and a tall dark shadowy silhouette standing motionless under the bare trees" passed; figure in view 3.0–5.5 s. night = skA 0–8.04 + skA 3.0–4.9. Final 31.0 s, -14.3 LUFS, 44.3 MB. Config saved as `tools/horror/config_salem_2026-11-23.json`.
 - Instagram web was already on @earthmaplivesatellite; the /p/ page comment box was a TEXTAREA this time.
+
+## Gotchas learned (2026-11-24 run)
+- Credits were 64 again (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- Flow settings chip already read "Video · 720p · 8s · 9:16 x1" with Omni 1.2 Flash; typed the prompt via the `What do you want to create?` textbox ref and clicked the `arrow_forward` ref. Started generation first, then did Earth while it rendered (done in < 5 min).
+- `earth_capture.js` can be injected after a `navigate` with `eval(await (await fetch('https://raw.githubusercontent.com/growlimomiraj/growlimo-videos/main/tools/horror/earth_capture.js')).text())` (fetch is allowed from the Earth page).
+- Highgate: search URL gave `@51.5669188,-0.1467755,94.9a`; `navigate @…,95a,450d,35y,0h,0t,0r` (ground snapped to ~99 m → `levels_d[0]=446`). 13 ticks/level → L14 = 2.28e7 (15 levels), scores 0.70–0.95. Clean basemap was already set. `target_px [540,960]` (West Cemetery entrance courtyard on Swain's Lane).
+- Street View: navigate `600d`, View → Show Street View, click the Swain's Lane line by the gate → "83 Swain's Ln" (Sep 2024), facing north up the lane past the cemetery gate pier, no people. `sv_crop_x 175 / w 731` (crop height 1299) clears the arrows (they start at y≈1350).
+- Night prompt with "Victorian cemetery avenue lined with ivy-covered stone tombs and a tall Egyptian-style stone gateway, and a tall dark shadowy silhouette standing motionless at the far end of the path" passed; the figure is in the gateway at 0–1.5 s and again 6.75–8.0 s (the 360° turn comes back to it). Skipped the spoiler start: night = skA 1.8–8.04 + skA 6.5–8.04. Final 28.8 s, -14.0 LUFS, 42.3 MB. Config saved as `tools/horror/config_highgate_2026-11-24.json`.
+- l2 "In the nineteen seventies, crowds hunted a vampire here." (no digits); year in `pin_sub`.
+- Instagram web was already on @earthmaplivesatellite; /p/ comment box was a TEXTAREA.

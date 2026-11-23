@@ -11,3 +11,4 @@ catacombs-paris
 bhangarh
 centralia
 salem
+highgate
