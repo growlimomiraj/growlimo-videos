@@ -1,0 +1,100 @@
+{
+ "place": "Highgate Cemetery, London",
+ "levels_d": [
+  446.0,
+  966.83,
+  2097.36,
+  4556.11,
+  9883.53,
+  21437.62,
+  46491.77,
+  100809.51,
+  218659.36,
+  474314.44,
+  1028787.62,
+  2231265.34,
+  4839706.18,
+  10497051.11,
+  22766677.64
+ ],
+ "target_px": [
+  540,
+  960
+ ],
+ "sv_image": "lv/SV0.png",
+ "sv_crop_x": 175,
+ "sv_crop_w": 731,
+ "night": [
+  {
+   "file": "in/skA.mp4",
+   "t0": 1.8,
+   "t1": 8.04
+  },
+  {
+   "file": "in/skA.mp4",
+   "t0": 6.5,
+   "t1": 8.04
+  }
+ ],
+ "voice": [
+  "bm_george",
+  0.92
+ ],
+ "lines": {
+  "l1": "This is Highgate Cemetery, in London.",
+  "l2": "In the nineteen seventies, crowds hunted a vampire here.",
+  "l3": "By day, it looks completely normal.",
+  "l4": "But someone opened Street View here at three a.m. and turned around.",
+  "l5": "Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."
+ },
+ "captions": {
+  "l1": [
+   2,
+   4,
+   6
+  ],
+  "l2": [
+   2,
+   4,
+   6,
+   9
+  ],
+  "l3": [
+   2,
+   4,
+   6
+  ],
+  "l4": [
+   3,
+   6,
+   9,
+   12
+  ]
+ },
+ "display": {
+  "three": "3"
+ },
+ "highlight": [
+  "highgate",
+  "cemetery",
+  "london",
+  "nineteen",
+  "seventies",
+  "vampire",
+  "hunted",
+  "normal",
+  "view",
+  "3",
+  "a.m",
+  "around"
+ ],
+ "texts": {
+  "hook": "Never open this street<br>at <b>3 AM</b> 😨",
+  "pin": "📍 Highgate Cemetery, London",
+  "pin_sub": "“The Highgate Vampire, 1970”",
+  "chip": "STREET VIEW · 03:07 AM",
+  "end1": "Explore every street on Earth…",
+  "end2": "if you dare.",
+  "end3": "Earth Map · Live Satellite View"
+ }
+}
