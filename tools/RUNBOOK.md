@@ -172,3 +172,14 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Night prompt with "Victorian cemetery avenue lined with ivy-covered stone tombs and a tall Egyptian-style stone gateway, and a tall dark shadowy silhouette standing motionless at the far end of the path" passed; the figure is in the gateway at 0–1.5 s and again 6.75–8.0 s (the 360° turn comes back to it). Skipped the spoiler start: night = skA 1.8–8.04 + skA 6.5–8.04. Final 28.8 s, -14.0 LUFS, 42.3 MB. Config saved as `tools/horror/config_highgate_2026-11-24.json`.
 - l2 "In the nineteen seventies, crowds hunted a vampire here." (no digits); year in `pin_sub`.
 - Instagram web was already on @earthmaplivesatellite; /p/ comment box was a TEXTAREA.
+
+## Gotchas learned (2026-11-25 run)
+- Credits were 64 again (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- **Sedlec was the last entry in `places.json`** — add new places before the next Earth Map run.
+- Labels sneaked into the capture even though Basemap settings showed **Clean** selected (the first stack had "Kostnice Sedlec", house numbers and POI dots; browser screenshots did NOT show them). Fix: View → Basemap settings → click Exploration, then Clean again, close, then snap. Always `peekbig()` L0 before scrolling the stack.
+- `preview_start` with an Earth URL re-used the existing Earth tab (navigated it) instead of opening a new one.
+- Show Street View via View menu / Ctrl+Shift+V did nothing this time (screenshots were grey, clicks blind). The pegman (bottom bar, ~(600,1374) in the 800×1422 frame) worked: blue Trekker lines around the chapel; a click at (329,711) opened a cemetery pano. One 600 px drag right = heading 0→332; a 300 px drag back = 346, which hid a distant visitor. `sv_crop_x 300 / w 731`.
+- Sedlec: search URL `@49.9617385,15.2881713,223.66a`; `navigate @…,224a,450d` → Earth reported `714.36a,9.96d` (camera 724, ground 224 → `levels_d[0]=500.2`). 13 ticks/level → L14 = 2.55e7 (15 levels), scores 0.77–0.95. `target_px [548,900]`.
+- Pin label "📍 Sedlec Ossuary, Czech Republic" overflowed the right edge; keep `pin` ≤ ~27 chars ("📍 Sedlec Ossuary, Czechia").
+- Night prompt with "small Gothic chapel courtyard … chandelier and garlands made of skulls and bones like a museum ossuary lit by candles, old gravestones … a tall dark shadowy silhouette standing motionless in the open chapel doorway" passed; figure in the doorway 3.5–6.5 s. night = skA 0–8.04 + skA 3.4–5.4. Final 31.1 s, -14.3 LUFS, 42.8 MB. Config saved as `tools/horror/config_sedlec_2026-11-25.json`.
+- Instagram web was already on @earthmaplivesatellite (post page shows View insights / Boost reel); /p/ comment box was a TEXTAREA.

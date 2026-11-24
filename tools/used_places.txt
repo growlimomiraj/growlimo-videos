@@ -12,3 +12,4 @@ bhangarh
 centralia
 salem
 highgate
+sedlec
