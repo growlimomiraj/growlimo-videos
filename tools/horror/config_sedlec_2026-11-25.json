@@ -1,0 +1,101 @@
+{
+ "place": "Sedlec Ossuary, Kutna Hora, Czech Republic",
+ "levels_d": [
+  500.2,
+  1084.96,
+  2353.63,
+  5105.24,
+  11071.92,
+  24011.21,
+  52085.89,
+  112965.78,
+  244994.28,
+  531361.01,
+  1152041.08,
+  2499106.53,
+  5420596.81,
+  11756180.7,
+  25497309.7
+ ],
+ "target_px": [
+  548,
+  900
+ ],
+ "sv_image": "lv/SV0.png",
+ "sv_crop_x": 300,
+ "sv_crop_w": 731,
+ "night": [
+  {
+   "file": "in/skA.mp4",
+   "t0": 0.0,
+   "t1": 8.04
+  },
+  {
+   "file": "in/skA.mp4",
+   "t0": 3.4,
+   "t1": 5.4
+  }
+ ],
+ "voice": [
+  "bm_george",
+  0.92
+ ],
+ "lines": {
+  "l1": "This is the Sedlec Ossuary, in the Czech Republic.",
+  "l2": "Inside this chapel, the decorations are made of human bones.",
+  "l3": "By day, it's just a quiet churchyard.",
+  "l4": "But someone opened Street View here at three a.m. and turned around.",
+  "l5": "Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."
+ },
+ "captions": {
+  "l1": [
+   3,
+   5,
+   7,
+   9
+  ],
+  "l2": [
+   3,
+   5,
+   8,
+   10
+  ],
+  "l3": [
+   2,
+   4,
+   7
+  ],
+  "l4": [
+   3,
+   6,
+   9,
+   12
+  ]
+ },
+ "display": {
+  "three": "3"
+ },
+ "highlight": [
+  "sedlec",
+  "ossuary",
+  "czech",
+  "republic",
+  "human",
+  "bones",
+  "quiet",
+  "churchyard",
+  "view",
+  "3",
+  "a.m",
+  "around"
+ ],
+ "texts": {
+  "hook": "Never open this street<br>at <b>3 AM</b> 😨",
+  "pin": "📍 Sedlec Ossuary, Czechia",
+  "pin_sub": "“The Bone Church”",
+  "chip": "STREET VIEW · 03:07 AM",
+  "end1": "Explore every street on Earth…",
+  "end2": "if you dare.",
+  "end3": "Earth Map · Live Satellite View"
+ }
+}
