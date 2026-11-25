@@ -1,20 +1,181 @@
 {
  "_note": "Creepy-but-public places with Google Street View coverage. Use each once; log used ones in tools/used_places.txt. No recent tragedies, no suicide sites, no gore. Facts in l2 must be well-documented history or clearly framed legend.",
  "places": [
-  {"slug":"doyers-st","search":"Doyers Street, New York, NY","name":"Doyers Street, New York","l2":"A hundred years ago, they called it the Bloody Angle.","pin_sub":"“The Bloody Angle”","night":"narrow curving Chinatown alley, fire escapes, red paper lanterns, Halloween skeleton props hanging by ropes"},
-  {"slug":"eastern-state","search":"Eastern State Penitentiary, Philadelphia","name":"Eastern State Penitentiary, Philadelphia","l2":"For 142 years it held prisoners in total isolation.","pin_sub":"“Abandoned since 1971”","night":"crumbling stone prison cell block corridor at night, peeling paint, rusted cell doors slowly swinging, one flickering bulb, shadowy mannequin figures standing inside cells"},
-  {"slug":"winchester-house","search":"Winchester Mystery House, San Jose","name":"Winchester Mystery House, San Jose","l2":"Its owner kept building it for 38 years. Stairs lead to nowhere.","pin_sub":"“160 rooms. Doors to nowhere.”","night":"Victorian mansion garden path at night, fog, a staircase that ends at the ceiling visible through windows, every window lit except one, an old porcelain doll on the porch swing"},
-  {"slug":"stanley-hotel","search":"The Stanley Hotel, Estes Park, Colorado","name":"The Stanley Hotel, Colorado","l2":"This hotel inspired Stephen King's The Shining.","pin_sub":"“Room 217”","night":"grand white hotel exterior at night in snow, long empty driveway, hedge maze, two figures in identical dresses standing far away under a lamp"},
-  {"slug":"waverly-hills","search":"Waverly Hills Sanatorium, Louisville, Kentucky","name":"Waverly Hills Sanatorium, Kentucky","l2":"A century ago, thousands came here sick with tuberculosis.","pin_sub":"“The body chute”","night":"huge abandoned sanatorium facade at night, broken windows, overgrown trees, a hospital gurney alone in the parking lot, flickering light in one upper window"},
-  {"slug":"lizzie-borden","search":"Lizzie Borden House, 230 Second Street, Fall River, MA","name":"Lizzie Borden House, Massachusetts","l2":"In 1892, two people were murdered inside. The case was never solved.","pin_sub":"“1892. Still unsolved.”","night":"old New England house on a quiet street at night, porch light flickering, an axe leaning by the door like a prop, a figure watching from the upstairs window"},
-  {"slug":"bran-castle","search":"Bran Castle, Romania","name":"Bran Castle, Romania","l2":"Locals call it Dracula's Castle.","pin_sub":"“Dracula's Castle”","night":"medieval castle road at night in Transylvania, mist, bats circling the towers, a lone horse carriage parked by the gate, red light from one window"},
-  {"slug":"hashima","search":"Hashima Island, Nagasaki, Japan","name":"Hashima Island, Japan","l2":"Five thousand people lived here. Then, in 1974, everyone left.","pin_sub":"“Ghost island”","night":"abandoned concrete apartment blocks on an island at night, collapsed staircases, wind, laundry still hanging on a balcony, a child's red shoe on the ground"},
-  {"slug":"greyfriars","search":"Greyfriars Kirkyard, Edinburgh","name":"Greyfriars Kirkyard, Edinburgh","l2":"Locals say the Mackenzie Poltergeist still lives here.","pin_sub":"“The Mackenzie Poltergeist”","night":"old Scottish graveyard at night, tilted tombstones, iron cage graves, thick fog, a lantern on a gravestone, a hooded figure far between the graves"},
-  {"slug":"catacombs-paris","search":"Catacombs of Paris, Place Denfert-Rochereau","name":"Paris Catacombs, France","l2":"Under these streets lie the bones of six million people.","pin_sub":"“Six million beneath you”","night":"Paris street at night with an open manhole glowing below, then the view turns to a tunnel entrance lined with stacked skulls and bones, candles flickering"},
-  {"slug":"bhangarh","search":"Bhangarh Fort, Rajasthan, India","name":"Bhangarh Fort, India","l2":"Visitors are not allowed inside after sunset.","pin_sub":"“Closed after sunset”","night":"ruined stone fort and temple street at night, moonlight, dust, monkeys silhouetted on walls, a lone oil lamp burning in a doorway"},
-  {"slug":"centralia","search":"Centralia, Pennsylvania","name":"Centralia, Pennsylvania","l2":"A fire has burned under this town since 1962.","pin_sub":"“Burning since 1962”","night":"empty cracked highway in a ghost town at night, smoke rising from cracks, graffiti, dead trees, fog, a rusted swing set squeaking"},
-  {"slug":"salem","search":"Proctor's Ledge, Salem, Massachusetts","name":"Salem, Massachusetts","l2":"In 1692, nineteen people were executed here for witchcraft.","pin_sub":"“1692”","night":"colonial New England street at night, leafless trees, old wooden houses, a circle of candles on the grass, crows on a fence"},
-  {"slug":"highgate","search":"Highgate Cemetery, London","name":"Highgate Cemetery, London","l2":"In the 1970s, people hunted a vampire here.","pin_sub":"“The Highgate Vampire”","night":"Victorian cemetery avenue at night, ivy-covered tombs, Egyptian-style gate, fog, a pale figure at the end of the path"},
-  {"slug":"sedlec","search":"Sedlec Ossuary, Kutná Hora","name":"Sedlec Ossuary, Czech Republic","l2":"Inside this chapel, the decorations are made of human bones.","pin_sub":"“The Bone Church”","night":"small Gothic chapel courtyard at night, the door open, inside a chandelier and garlands made of skulls and bones lit by candles"}
+  {
+   "slug": "doyers-st",
+   "search": "Doyers Street, New York, NY",
+   "name": "Doyers Street, New York",
+   "l2": "A hundred years ago, they called it the Bloody Angle.",
+   "pin_sub": "“The Bloody Angle”",
+   "night": "narrow curving Chinatown alley, fire escapes, red paper lanterns, Halloween skeleton props hanging by ropes"
+  },
+  {
+   "slug": "eastern-state",
+   "search": "Eastern State Penitentiary, Philadelphia",
+   "name": "Eastern State Penitentiary, Philadelphia",
+   "l2": "For 142 years it held prisoners in total isolation.",
+   "pin_sub": "“Abandoned since 1971”",
+   "night": "crumbling stone prison cell block corridor at night, peeling paint, rusted cell doors slowly swinging, one flickering bulb, shadowy mannequin figures standing inside cells"
+  },
+  {
+   "slug": "winchester-house",
+   "search": "Winchester Mystery House, San Jose",
+   "name": "Winchester Mystery House, San Jose",
+   "l2": "Its owner kept building it for 38 years. Stairs lead to nowhere.",
+   "pin_sub": "“160 rooms. Doors to nowhere.”",
+   "night": "Victorian mansion garden path at night, fog, a staircase that ends at the ceiling visible through windows, every window lit except one, an old porcelain doll on the porch swing"
+  },
+  {
+   "slug": "stanley-hotel",
+   "search": "The Stanley Hotel, Estes Park, Colorado",
+   "name": "The Stanley Hotel, Colorado",
+   "l2": "This hotel inspired Stephen King's The Shining.",
+   "pin_sub": "“Room 217”",
+   "night": "grand white hotel exterior at night in snow, long empty driveway, hedge maze, two figures in identical dresses standing far away under a lamp"
+  },
+  {
+   "slug": "waverly-hills",
+   "search": "Waverly Hills Sanatorium, Louisville, Kentucky",
+   "name": "Waverly Hills Sanatorium, Kentucky",
+   "l2": "A century ago, thousands came here sick with tuberculosis.",
+   "pin_sub": "“The body chute”",
+   "night": "huge abandoned sanatorium facade at night, broken windows, overgrown trees, a hospital gurney alone in the parking lot, flickering light in one upper window"
+  },
+  {
+   "slug": "lizzie-borden",
+   "search": "Lizzie Borden House, 230 Second Street, Fall River, MA",
+   "name": "Lizzie Borden House, Massachusetts",
+   "l2": "In 1892, two people were murdered inside. The case was never solved.",
+   "pin_sub": "“1892. Still unsolved.”",
+   "night": "old New England house on a quiet street at night, porch light flickering, an axe leaning by the door like a prop, a figure watching from the upstairs window"
+  },
+  {
+   "slug": "bran-castle",
+   "search": "Bran Castle, Romania",
+   "name": "Bran Castle, Romania",
+   "l2": "Locals call it Dracula's Castle.",
+   "pin_sub": "“Dracula's Castle”",
+   "night": "medieval castle road at night in Transylvania, mist, bats circling the towers, a lone horse carriage parked by the gate, red light from one window"
+  },
+  {
+   "slug": "hashima",
+   "search": "Hashima Island, Nagasaki, Japan",
+   "name": "Hashima Island, Japan",
+   "l2": "Five thousand people lived here. Then, in 1974, everyone left.",
+   "pin_sub": "“Ghost island”",
+   "night": "abandoned concrete apartment blocks on an island at night, collapsed staircases, wind, laundry still hanging on a balcony, a child's red shoe on the ground"
+  },
+  {
+   "slug": "greyfriars",
+   "search": "Greyfriars Kirkyard, Edinburgh",
+   "name": "Greyfriars Kirkyard, Edinburgh",
+   "l2": "Locals say the Mackenzie Poltergeist still lives here.",
+   "pin_sub": "“The Mackenzie Poltergeist”",
+   "night": "old Scottish graveyard at night, tilted tombstones, iron cage graves, thick fog, a lantern on a gravestone, a hooded figure far between the graves"
+  },
+  {
+   "slug": "catacombs-paris",
+   "search": "Catacombs of Paris, Place Denfert-Rochereau",
+   "name": "Paris Catacombs, France",
+   "l2": "Under these streets lie the bones of six million people.",
+   "pin_sub": "“Six million beneath you”",
+   "night": "Paris street at night with an open manhole glowing below, then the view turns to a tunnel entrance lined with stacked skulls and bones, candles flickering"
+  },
+  {
+   "slug": "bhangarh",
+   "search": "Bhangarh Fort, Rajasthan, India",
+   "name": "Bhangarh Fort, India",
+   "l2": "Visitors are not allowed inside after sunset.",
+   "pin_sub": "“Closed after sunset”",
+   "night": "ruined stone fort and temple street at night, moonlight, dust, monkeys silhouetted on walls, a lone oil lamp burning in a doorway"
+  },
+  {
+   "slug": "centralia",
+   "search": "Centralia, Pennsylvania",
+   "name": "Centralia, Pennsylvania",
+   "l2": "A fire has burned under this town since 1962.",
+   "pin_sub": "“Burning since 1962”",
+   "night": "empty cracked highway in a ghost town at night, smoke rising from cracks, graffiti, dead trees, fog, a rusted swing set squeaking"
+  },
+  {
+   "slug": "salem",
+   "search": "Proctor's Ledge, Salem, Massachusetts",
+   "name": "Salem, Massachusetts",
+   "l2": "In 1692, nineteen people were executed here for witchcraft.",
+   "pin_sub": "“1692”",
+   "night": "colonial New England street at night, leafless trees, old wooden houses, a circle of candles on the grass, crows on a fence"
+  },
+  {
+   "slug": "highgate",
+   "search": "Highgate Cemetery, London",
+   "name": "Highgate Cemetery, London",
+   "l2": "In the 1970s, people hunted a vampire here.",
+   "pin_sub": "“The Highgate Vampire”",
+   "night": "Victorian cemetery avenue at night, ivy-covered tombs, Egyptian-style gate, fog, a pale figure at the end of the path"
+  },
+  {
+   "slug": "sedlec",
+   "search": "Sedlec Ossuary, Kutná Hora",
+   "name": "Sedlec Ossuary, Czech Republic",
+   "l2": "Inside this chapel, the decorations are made of human bones.",
+   "pin_sub": "“The Bone Church”",
+   "night": "small Gothic chapel courtyard at night, the door open, inside a chandelier and garlands made of skulls and bones lit by candles"
+  },
+  {
+   "slug": "island-of-dolls",
+   "search": "Isla de las Muñecas, Xochimilco, Mexico City",
+   "name": "Island of the Dolls, Mexico",
+   "l2": "Hundreds of old dolls are tied to the trees on this tiny island.",
+   "pin_sub": "“Isla de las Muñecas”",
+   "night": "a tiny overgrown island in dark still canals, an old wooden shack and a wooden pier, hundreds of old weathered dolls tied to the tree branches and fences like Halloween props"
+  },
+  {
+   "slug": "hill-of-crosses",
+   "search": "Hill of Crosses, Šiauliai, Lithuania",
+   "name": "Hill of Crosses, Lithuania",
+   "l2": "More than a hundred thousand crosses cover this small hill.",
+   "pin_sub": "“Kryžių kalnas”",
+   "night": "a small hill completely covered with thousands of old wooden and iron crosses and rosaries swaying in the wind, a narrow path between them"
+  },
+  {
+   "slug": "bodie",
+   "search": "Bodie State Historic Park, California",
+   "name": "Bodie Ghost Town, California",
+   "l2": "A gold rush town, left exactly the way it was abandoned.",
+   "pin_sub": "“Frozen in time”",
+   "night": "weathered wooden gold rush ghost town street, sagging houses with dusty windows, an old church, a rusted wagon"
+  },
+  {
+   "slug": "kolmanskop",
+   "search": "Kolmanskop Ghost Town, Namibia",
+   "name": "Kolmanskop, Namibia",
+   "l2": "The desert is swallowing this town, one house at a time.",
+   "pin_sub": "“Buried by the sand”",
+   "night": "abandoned colonial houses half-filled with desert sand dunes, open doorways, peeling pastel walls, sand pouring through broken windows"
+  },
+  {
+   "slug": "hoia-baciu",
+   "search": "Hoia Forest, Cluj-Napoca, Romania",
+   "name": "Hoia Forest, Romania",
+   "l2": "Locals call it the Bermuda Triangle of Romania.",
+   "pin_sub": "“The forest people never leave”",
+   "night": "a forest of strangely twisted crooked trees around a perfectly round empty clearing, fallen leaves"
+  },
+  {
+   "slug": "craco",
+   "search": "Craco, Basilicata, Italy",
+   "name": "Craco, Italy",
+   "l2": "A whole hilltop town, emptied after a landslide.",
+   "pin_sub": "“The ghost town on the hill”",
+   "night": "crumbling medieval stone hilltop village, empty arched alleys, a ruined bell tower against the night sky"
+  },
+  {
+   "slug": "hellfire-club",
+   "search": "Hellfire Club, Montpelier Hill, Dublin",
+   "name": "Hellfire Club, Dublin",
+   "l2": "Legend says the devil once came here to play cards.",
+   "pin_sub": "“The Hellfire Club”",
+   "night": "a ruined stone hunting lodge on a forested hilltop, black empty window openings, a stone fireplace inside"
+  }
  ]
 }

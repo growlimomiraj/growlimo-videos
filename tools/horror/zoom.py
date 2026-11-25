@@ -18,6 +18,20 @@ for i in range(N-1):
     ox,oy=tcx-W/2, tcy-H/2
     if mx<0.35 or abs(ox)>150 or abs(oy)>150: ox,oy=0.0,0.0
     off[i]=(ox,oy); print(i,'score',round(mx,3),'off',round(ox,1),round(oy,1))
+# per-level colour gain so a finer level matches its parent where it fades in
+GAIN=[np.ones(3,np.float32) for _ in range(N)]
+for i in range(N-1):
+    s_=D[i]/D[i+1]; tw,th=int(W*s_),int(H*s_)
+    small=cv2.resize(L[i],(tw,th),interpolation=cv2.INTER_AREA)
+    x0=int(round(W/2+off[i][0]-tw/2)); y0=int(round(H/2+off[i][1]-th/2))
+    if x0<0 or y0<0 or x0+tw>W or y0+th>H: continue
+    par=L[i+1][y0:y0+th,x0:x0+tw]
+    m=(small.mean(2)>12)&(par.mean(2)>12)
+    if m.sum()<1000: continue
+    sg=max(3,tw//12)|1
+    bp=cv2.GaussianBlur(par,(0,0),sg); bs=cv2.GaussianBlur(small,(0,0),sg)
+    r=np.clip(bp/np.maximum(bs,4),0.6,1.6)
+    GAIN[i]=cv2.resize(r,(W,H),interpolation=cv2.INTER_LINEAR).astype(np.float32); print('gainmap',i,np.round(r.reshape(-1,3).mean(0),3))
 # level geometry in L16 pixel units
 k=[d/D[-1] for d in D]
 c=[None]*N; c[N-1]=np.array([W/2,H/2])
@@ -43,6 +57,10 @@ def render(C,P):
         t=(c[i]-C)/P + np.array([W/2,H/2]) - np.array([W/2,H/2])*sc
         M=np.array([[sc,0,t[0]],[0,sc,t[1]]],np.float32)
         img=cv2.warpAffine(L[i],M,(W,H),flags=cv2.INTER_CUBIC if sc>1 else cv2.INTER_AREA,borderMode=cv2.BORDER_CONSTANT)
+        gw=float(np.clip((1.6-sc)/0.6,0,1))
+        if gw>0 and GAIN[i].ndim==3:
+            gm=cv2.warpAffine(GAIN[i],M,(W,H),flags=cv2.INTER_LINEAR,borderMode=cv2.BORDER_CONSTANT,borderValue=(1,1,1))
+            img=img*(1+(gm-1)*gw)
         if idx==0: out=img
         else:
             a=cv2.warpAffine(fm,M,(W,H),flags=cv2.INTER_LINEAR)
