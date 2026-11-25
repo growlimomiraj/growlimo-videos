@@ -13,3 +13,4 @@ centralia
 salem
 highgate
 sedlec
+island-of-dolls
