@@ -1,0 +1,100 @@
+{
+ "place": "Bodie State Historic Park, California",
+ "levels_d": [
+  448,
+  969.05533652,
+  2101.58821479,
+  4558.95257976,
+  9887.64176361,
+  21446.19931185,
+  46513.42050886,
+  100871.66554168,
+  218738.12892247,
+  474374.43827994,
+  1028880.56461304,
+  2231907.48535663,
+  4840962.7424705,
+  10499129.05304074,
+  22776289.6623373
+ ],
+ "target_px": [
+  540,
+  960
+ ],
+ "sv_image": "lv/SV0.png",
+ "sv_crop_x": 175,
+ "sv_crop_w": 731,
+ "night": [
+  {
+   "file": "in/skA.mp4",
+   "t0": 0,
+   "t1": 8.04
+  },
+  {
+   "file": "in/skA.mp4",
+   "t0": 3.6,
+   "t1": 5.6
+  }
+ ],
+ "voice": [
+  "bm_george",
+  0.92
+ ],
+ "lines": {
+  "l1": "This is Bodie, a ghost town in California.",
+  "l2": "A gold rush town, left exactly the way it was abandoned.",
+  "l3": "By day, it's just a quiet piece of history.",
+  "l4": "But someone opened Street View here at three a.m. and turned around.",
+  "l5": "Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."
+ },
+ "captions": {
+  "l1": [
+   3,
+   6,
+   8
+  ],
+  "l2": [
+   4,
+   6,
+   9,
+   11
+  ],
+  "l3": [
+   2,
+   4,
+   6,
+   9
+  ],
+  "l4": [
+   3,
+   6,
+   9,
+   12
+  ]
+ },
+ "display": {
+  "three": "3"
+ },
+ "highlight": [
+  "bodie",
+  "ghost",
+  "california",
+  "gold",
+  "abandoned",
+  "quiet",
+  "history",
+  "view",
+  "3",
+  "a.m",
+  "around"
+ ],
+ "texts": {
+  "hook": "Never open this street<br>at <b>3 AM</b> 😨",
+  "pin": "📍 Bodie, California",
+  "pin_sub": "“Frozen in time”",
+  "chip": "STREET VIEW · 03:07 AM",
+  "end1": "Explore every street on Earth…",
+  "end2": "if you dare.",
+  "end3": "Earth Map · Live Satellite View"
+ }
+}
