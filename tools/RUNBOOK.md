@@ -201,3 +201,11 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Pegman at 600d drew blue lines on the hill paths; a click at (533,707) in the 800×1422 frame opened a photo sphere among the crosses (no people, no canvas arrows) → `sv_crop_x 0 / w 1080`.
 - Night prompt with "…crosses and rosaries… a narrow path between them, and a tall dark shadowy silhouette standing motionless far up the path among the crosses" passed; the figure is small on the path only at 0.8–2.6 s. Put the spoiler last: night = skA 2.6–8.04 + skA 0.4–2.4. Final 28.5 s, -14.0 LUFS, 39.4 MB. Config saved as `tools/horror/config_hill-of-crosses_2026-11-27.json`.
 - Instagram web was on @bluetooth_auticonnect; switched with ☰ (~(28,523)) → Switch profiles → earthmaplivesatellite. /p/ comment box was a TEXTAREA.
+
+## Gotchas learned (2026-11-28 run)
+- Credits were 64 again (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- Bodie: search URL gave `@38.2133085,-119.015125` (the visitor parking lot, ground ≈ 2552 m). The town centre is `@38.21222,-119.01278`; `navigate @…,2550a,450d` (camera 3000 → `levels_d[0]=448`). 13 ticks/level → L14 = 2.28e7 (15 levels), scores 0.87–0.95. `target_px [540,960]`. Clean basemap toggled Exploration → Clean; L0 peek clean.
+- Pegman at 700d shows Trekker/photo-sphere lines all over town. A click on a loop line near the big buildings opened an Apr 2015 photo sphere; one 250 px left drag (heading ~12°) faced a weathered barn and houses, no people. `sv_crop_x 175 / w 731`. Remember to re-inject `earth_capture.js` after every `navigate` (the SV snap failed once with "snap is not defined").
+- Night prompt with "…gold rush ghost town street… an old white wooden church, a rusted wagon, and a tall dark shadowy silhouette standing motionless in the open doorway of the old church" passed; figure in the doorway 4.5–6.0 s. night = skA 0–8.04 + skA 3.6–5.6. Final 31.1 s, -14.2 LUFS, 44.0 MB. Config saved as `tools/horror/config_bodie_2026-11-28.json`.
+- Instagram web was already on @earthmaplivesatellite; /p/ comment box was a TEXTAREA.
+- Remaining places: kolmanskop, hoia-baciu, craco, hellfire-club.
