@@ -1,0 +1,101 @@
+{
+ "place": "Kolmanskop Ghost Town, Namibia",
+ "levels_d": [
+  450,
+  975.68097778,
+  2116.13243652,
+  4589.7394777,
+  9955.11194077,
+  21591.30814256,
+  46829.70981739,
+  101560.25607247,
+  220276.36796985,
+  477720.81785046,
+  1036294.8331511,
+  2247377.21644163,
+  4874598.37133467,
+  10572593.13984632,
+  22930994.94776487
+ ],
+ "target_px": [
+  540,
+  1130
+ ],
+ "sv_image": "lv/SV0.png",
+ "sv_crop_x": 0,
+ "sv_crop_w": 731,
+ "night": [
+  {
+   "file": "in/skA.mp4",
+   "t0": 4.5,
+   "t1": 8.04
+  },
+  {
+   "file": "in/skA.mp4",
+   "t0": 0.0,
+   "t1": 2.9
+  }
+ ],
+ "voice": [
+  "bm_george",
+  0.92
+ ],
+ "lines": {
+  "l1": "This is Kolmanskop, a ghost town in Namibia.",
+  "l2": "The desert is swallowing this town, one house at a time.",
+  "l3": "By day, it's just sand and silence.",
+  "l4": "But someone opened Street View here at three a.m. and turned around.",
+  "l5": "Explore every street on Earth, if you dare. Earth Map, free on Google Play. Link in bio."
+ },
+ "captions": {
+  "l1": [
+   3,
+   6,
+   8
+  ],
+  "l2": [
+   2,
+   4,
+   6,
+   8,
+   11
+  ],
+  "l3": [
+   2,
+   4,
+   7
+  ],
+  "l4": [
+   3,
+   6,
+   9,
+   12
+  ]
+ },
+ "display": {
+  "three": "3"
+ },
+ "highlight": [
+  "kolmanskop",
+  "ghost",
+  "namibia",
+  "desert",
+  "swallowing",
+  "house",
+  "sand",
+  "silence",
+  "view",
+  "3",
+  "a.m",
+  "around"
+ ],
+ "texts": {
+  "hook": "Never open this street<br>at <b>3 AM</b> 😨",
+  "pin": "📍 Kolmanskop, Namibia",
+  "pin_sub": "“Buried by the sand”",
+  "chip": "STREET VIEW · 03:07 AM",
+  "end1": "Explore every street on Earth…",
+  "end2": "if you dare.",
+  "end3": "Earth Map · Live Satellite View"
+ }
+}
