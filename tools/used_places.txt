@@ -16,3 +16,4 @@ sedlec
 island-of-dolls
 hill-of-crosses
 bodie
+kolmanskop

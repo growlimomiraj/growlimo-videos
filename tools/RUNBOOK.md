@@ -209,3 +209,13 @@ Formula (≈30 s): a real-looking person has a relatable Bluetooth problem (hook
 - Night prompt with "…gold rush ghost town street… an old white wooden church, a rusted wagon, and a tall dark shadowy silhouette standing motionless in the open doorway of the old church" passed; figure in the doorway 4.5–6.0 s. night = skA 0–8.04 + skA 3.6–5.6. Final 31.1 s, -14.2 LUFS, 44.0 MB. Config saved as `tools/horror/config_bodie_2026-11-28.json`.
 - Instagram web was already on @earthmaplivesatellite; /p/ comment box was a TEXTAREA.
 - Remaining places: kolmanskop, hoia-baciu, craco, hellfire-club.
+
+## Gotchas learned (2026-11-29 run)
+- Credits were 64 again (< 130) → Earth Map only, night ×1 (24); 40 left after. Bluetooth skipped.
+- Kolmanskop: search URL gave `@-26.7023513,15.2314556,134a`; `navigate @…,134a,450d` loaded first try (~35 s). `levels_d[0]=450`. 13 ticks/level → L14 = 2.29e7 (15 levels), scores 0.77–0.99. `target_px [540,1130]` (row of houses just below centre). Clean basemap toggled Exploration → Clean; L0 peek clean. Mosaic `.tmp` 8.2 MB.
+- The first View-menu click opened the Edit menu (menu bar x positions: Edit ~92, View ~128 in the 800-px frame).
+- Pegman at 700d shows blue lines along the main street; a click at (477,940) opened a Jun 2018 photo sphere facing an empty sand road; one 600 px right drag (heading ~333°) faced a sand-filled colonial house row, no people. Canvas arrows start at y≈1350, so `sv_crop_x 0 / w 731` keeps the house on the left.
+- Night prompt with "abandoned colonial houses half-filled with desert sand dunes… a tall dark shadowy silhouette standing motionless in an open doorway of a sand-filled house" passed; the figure is in the doorway 1.5–4.2 s. The clip loops seamlessly 8.04 → 0, so: night = skA 4.5–8.04 + skA 0.0–2.9 (spoiler last, scare on the figure). Final 27.5 s, -13.9 LUFS, 35.6 MB. Config saved as `tools/horror/config_kolmanskop_2026-11-29.json`.
+- `browser_batch` without `tabId` on each item ran on the Flow tab after a `navigate` of the Earth/IG tab — pass `tabId` on every item (or `tabs_select` first).
+- Instagram web was already on @earthmaplivesatellite; /p/ comment box was a TEXTAREA.
+- Remaining places: hoia-baciu, craco, hellfire-club. Add more soon.
